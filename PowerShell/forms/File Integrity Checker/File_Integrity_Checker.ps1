@@ -50,7 +50,7 @@ function Show-File_Integrity_Checker {
 		Major = 1
 		Minor = 1
 		Patch = 0
-		Build = 0
+		Build = 1
 	}
 	
 	$checkboxes = @($checkboxMD5, $checkboxSHA1, $checkboxSHA256, $checkboxSHA384, $checkboxSHA512)
@@ -296,9 +296,9 @@ function Show-File_Integrity_Checker {
 	# buttonFile
 	#
 	$buttonFile.Anchor = 'Top, Right'
-	$buttonFile.Location = '286, 20'
+	$buttonFile.Location = '286, 19'
 	$buttonFile.Name = 'buttonFile'
-	$buttonFile.Size = '86, 32'
+	$buttonFile.Size = '86, 33'
 	$buttonFile.TabIndex = 11
 	$buttonFile.Text = 'Browse'
 	$buttonFile.UseCompatibleTextRendering = $True
@@ -308,10 +308,10 @@ function Show-File_Integrity_Checker {
 	# textboxFile
 	#
 	$textboxFile.Anchor = 'Top, Left, Right'
-	$textboxFile.Location = '8, 20'
+	$textboxFile.Location = '7, 20'
 	$textboxFile.Multiline = $True
 	$textboxFile.Name = 'textboxFile'
-	$textboxFile.Size = '274, 32'
+	$textboxFile.Size = '273, 32'
 	$textboxFile.TabIndex = 10
 	$textboxFile.TextAlign = 'Center'
 	$textboxFile.add_TextChanged($textboxFile_TextChanged)
