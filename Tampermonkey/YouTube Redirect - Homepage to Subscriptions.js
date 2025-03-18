@@ -1,9 +1,10 @@
 // ==UserScript==
-// @name         YouTube Homepage Redirect
+// @name         YouTube Homepage to Subscriptions Redirect
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  Redirect YouTube homepage to subscriptions page
 // @match        https://www.youtube.com/*
+// @run-at       document-start
 // @grant        none
 // ==/UserScript==
 

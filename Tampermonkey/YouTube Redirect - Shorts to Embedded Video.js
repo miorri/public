@@ -1,9 +1,10 @@
 // ==UserScript==
-// @name         YouTube Video Embedder
+// @name         YouTube Shorts to Embed Redirect
 // @namespace    http://tampermonkey.net/
-// @version      1.3
-// @description  Redirect YouTube video pages to embed pages
+// @version      1.1
+// @description  Redirect YouTube Shorts pages to embed pages
 // @match        https://www.youtube.com/*
+// @run-at       document-start
 // @grant        none
 // ==/UserScript==
 
@@ -13,18 +14,8 @@
     // Function to redirect to embed URL
     function redirectToEmbed() {
         let currentUrl = window.location.href;
-        let newUrl = currentUrl;
-
-        if (newUrl.includes('/watch?v=')) {
-            newUrl = newUrl.replace('/watch?v=', '/embed/');
-        }
-
-        // Remove any substring starting with '&'
-        if (newUrl.includes('&')) {
-            newUrl = newUrl.replace(/&[^&]*$/, '');
-        }
-
-        if (newUrl !== currentUrl) {
+        if (currentUrl.includes('/shorts/')) {
+            let newUrl = currentUrl.replace('/shorts/', '/embed/');
             window.location.replace(newUrl);
         }
     }
